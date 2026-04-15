@@ -1,0 +1,180 @@
+.topbar {
+    width: 100%;
+    height: 60px;
+    background: black;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    gap: 15px;
+}
+
+
+
+/* Menu Icon */
+.menu-icon {
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Search Box */
+.search-box {
+    display: flex;
+}
+
+.search-box input {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+.search-box button {
+    padding: 6px 10px;
+    border: none;
+    background: white;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+    height: 100%;
+    background: #111;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    transition: 0.3s;
+    padding: 20px;
+    font-size: larger;
+    font-weight: bold;
+
+/* Jab click ho toh bahar aaye */
+.sidebar.active {
+    left: 0 !important;
+}
+}
+.sidebar h2{
+    text-decoration: underline;
+}
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    padding-top: 15px;
+}
+
+.sidebar a:hover {
+    background: #444;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 999;   /* 👈 LOWER */
+}
+   .overlay.active {
+    display: block !important;
+} 
+/* Sidebar always above */
+.sidebar {
+    z-index: 1000;  /* 👈 HIGHER */
+}
+
+/* Main */
+.main {
+    padding: 20px;
+    text-align: center;
+}
+.main h1{
+    padding-left: 57px;
+}
+.main p{
+padding-left: 45px;
+padding-top: 20px;
+font-size: large;
+color: black;
+}
+/* Cards grid */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+.cards button{
+    width: 100px;
+}
+.cards p{
+    font-size: 17px;
+    font-weight: bold;
+}
+/* Single card */
+.card {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Small hover effect */
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Image */
+.card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Text */
+.card h3 {
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+.card p {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Button */
+.card button {
+    padding: 8px 16px;
+    border: none;
+    background: black;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background: #333;
+}
+.heading {
+    color: white;
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+    padding-left: 370px;
+}
+
+

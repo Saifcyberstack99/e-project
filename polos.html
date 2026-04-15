@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav-style.css">
+</head>
+<body>
+
+<!-- Topbar -->
+<div class="topbar">
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+    <form class="search-box" onsubmit="searchFunction(event)">
+        <input type="text" id="searchInput" placeholder="Search products...">
+        <button type="submit">Search</button>
+    </form>
+        <!-- headings -->
+    <div class="heading">
+    <h1>VOGUEMAN</h1>
+</div>
+</div>
+
+<!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+    <h2>Wardrobe</h2>
+    <a href="index.html">Home</a>
+    <a href="shirts.html">Shirts</a>
+    <a href="polos.html">Collor Polo</a>
+    <a href="bottoms.html">Bottom Wear</a>
+    <a href="tshirts.html">T-Shirts</a>
+    <a href="fragrances.html">Fragrances</a>
+    <a href="shoes.html">Foot Wear</a>
+</div>
+
+<!-- Overlay -->
+<div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+<!-- Main Content -->
+<div class="main">
+    <h1>Polos</h1>
+    <p>12 products</p>
+</div>
+
+<div class="cards">
+
+    <div class="card">
+        <img src="Collar Polo/pink color polo.webp">
+        <h3>Johnny Collar Polo - Pink</h3>
+        <p>Rs. 2,999</p>
+        <button onclick="addToCart('Polo Shirt')">Add</button>
+    </div>
+
+    <div class="card">
+        <img src="Collar Polo/collor pollo t black.webp">
+        <h3>Johnny Collar Polo - Black</h3>
+        <p>Rs. 3,499</p>
+        <button onclick="addToCart('Polo Shirt')">Add</button>
+    </div>
+
+    <div class="card">
+        <img src="Collar Polo/collor polo t  white.webp">
+        <h3>Johnny Collar Polo - White</h3>
+        <p>Rs. 1,999</p>
+        <button onclick="addToCart('Polo Shirt')">Add</button>
+    </div>
+
+    <div class="card">
+        <img src="Collar Polo/collor polo t grey.webp">
+        <h3>Johnny Collar Polo - Heather Grey</h3>
+        <p>Rs. 4,999</p>
+        <button onclick="addToCart('Polo Shirt')">Add</button>
+    </div>
+
+</div>
+
+<div class="cards">
+
+    <div class="card">
+        <img src="Collar Polo/purple color polo.webp">
+        <h3>Cuban Collar Polo - Navy BlueFormal Shirt</h3>
+        <p>Rs. 2,999</p>
+        <button onclick="addToCart('Polo Shirt')">Add</button>
+    </div>
+
+    <div class="card">
+        <img src="Collar Polo/new color polo.webp">
+        <h3>Cuban Collar Polo - Sea Green</h3>
+        <p>Rs. 3,499</p>
+        <button onclick="addToCart('Polo Shirt')">Add</button>
+    </div>
+
+    <div class="card">
+        <img src="Collar Polo/collor polo white.webp">
+        <h3>Sports Polo - White</h3>
+        <p>Rs. 1,999</p>
+        <button onclick="addToCart('Polo Shirt')">Add</button>
+    </div>
+
+    <div class="card">
+        <img src="Collar Polo/color polo browwn.webp">
+        <h3>Sports Polo - Beige</h3>
+        <p>Rs. 4,999</p>
+        <button onclick="addToCart('Polo Shirt')">Add</button>
+    </div>
+
+</div>
+
+<div class="cards">
+
+    <div class="card">
+        <img src="Collar Polo/color polo dark grey.webp">
+        <h3>Sports Polo - Grey</h3>
+        <p>Rs. 2,999</p>
+        <button onclick="addToCart('Polo Shirt')">Add</button>
+    </div>
+
+    <div class="card">
+        <img src="Collar Polo/color polo blue.webp">
+        <h3>Sports Polo - Ocean Blue</h3>
+        <p>Rs. 3,499</p>
+        <button onclick="addToCart('Polo Shirt')">Add</button>
+    </div>
+
+    <div class="card">
+        <img src="Collar Polo/new color polo.webp">
+        <h3>Sports Polo - Sea Green</h3>
+        <p>Rs. 1,999</p>
+        <button onclick="addToCart('Polo Shirt')">Add</button>
+    </div>
+
+    <div class="card">
+        <img src="Collar Polo/mehndi color polo.webp">
+        <h3>Cuban Collar Polo - Forest Green</h3>
+        <p>Rs. 4,999</p>
+        <button onclick="addToCart('Polo Shirt')">Add</button>
+    </div>
+
+</div>
+
+
+
+
+<script src="nav-script.js"></script>
+</body>
+</html>

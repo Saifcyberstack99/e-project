@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search | VogueMan</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffffff;
+        }
+        .search-page-container {
+            max-width: 800px;
+            margin: 100px auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .search-header h2 {
+            font-size: 14px;
+            letter-spacing: 3px;
+            color: #999;
+            margin-bottom: 40px;
+        }
+        .search-input-wrapper {
+            border-bottom: 2px solid #333;
+            display: flex;
+            align-items: center;
+            padding-bottom: 10px;
+        }
+        .search-input-wrapper input {
+            width: 100%;
+            border: none;
+            outline: none;
+            font-size: 24px;
+            padding: 10px;
+            text-transform: uppercase;
+        }
+        .search-input-wrapper span {
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .trending-section {
+            margin-top: 60px;
+            text-align: left;
+        }
+        .trending-section h3 {
+            font-size: 12px;
+            letter-spacing: 2px;
+            color: #333;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .trending-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .tag {
+            padding: 8px 20px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            text-decoration: none;
+            color: #555;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+        .tag:hover {
+            background-color: #002147;
+            color: white;
+            border-color: #002147;
+        }
+        .close-search {
+            position: absolute;
+            top: 30px;
+            right: 50px;
+            font-size: 30px;
+            text-decoration: none;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="close-search">&times;</a>
+
+    <div class="search-page-container">
+        <div class="search-header">
+            <h2>WHAT ARE YOU LOOKING FOR?</h2>
+        </div>
+
+        <div class="search-input-wrapper">
+            <input type="text" placeholder="SEARCH OUR STORE..." autofocus>
+            <span>🔍</span>
+        </div>
+
+        <div class="trending-section">
+            <h3>TRENDING SEARCHES</h3>
+            <div class="trending-tags">
+                <a href="polos.html" class="tag">POLO SHIRTS</a>
+                <a href="tshirts.html" class="tag">BASIC TEES</a>
+                <a href="fragrances.html" class="tag">FRAGNANCES</a>
+                <a href="bottoms.html" class="tag">BOTTOM WEAR</a>
+                <a href="shoes.html" class="tag">SHOES</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

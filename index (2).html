@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav-style.css">
+</head>
+<body>
+
+<!-- Topbar -->
+<div class="topbar">
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+    <form class="search-box" onsubmit="searchFunction(event)">
+        <input type="text" id="searchInput" placeholder="Search products...">
+        <button type="submit">Search</button>
+    </form>
+    <!-- headings -->
+    <div class="heading">
+    <h1>MENDEES</h1>
+</div>
+</div>
+
+
+<!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+    <h2>Wardrobe</h2>
+    
+    <a href="index.html">Home</a>
+    <a href="shirts.html">Shirts</a>
+    <a href="polos.html">Collor Polo</a>
+    <a href="bottoms.html">Bottom Wear</a>
+    <a href="tshirts.html">T-Shirts</a>
+    <a href="fragrances.html">Fragrances</a>
+    <a href="shoes.html">Foot Wear</a>
+</div>
+
+<!-- Overlay -->
+<div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+<!-- Main Content -->
+<div class="main">
+    <h1>Welcome</h1>
+    <p>Use ☰ menu or search above</p>
+</div>
+
+<script src="nav-script.js"></script>
+
+</body>
+</html>

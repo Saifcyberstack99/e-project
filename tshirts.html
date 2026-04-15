@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav-style.css">
+</head>
+<body>
+
+<!-- Topbar -->
+<div class="topbar">
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+    <form class="search-box" onsubmit="searchFunction(event)">
+        <input type="text" id="searchInput" placeholder="Search products...">
+        <button type="submit">Search</button>
+    </form>
+    <!-- headings -->
+    <div class="heading">
+    <h1>VOGUEMAN</h1>
+</div>
+</div>
+</div>
+
+<!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+    <h2>Wardrobe</h2>
+    <a href="index.html">Home</a>
+    <a href="shirts.html">Shirts</a>
+    <a href="polos.html">Collor Polo</a>
+    <a href="bottoms.html">Bottom Wear</a>
+    <a href="tshirts.html">T-Shirts</a>
+    <a href="fragrances.html">Fragrances</a>
+    <a href="shoes.html">Foot Wear</a>
+</div>
+
+<!-- Overlay -->
+<div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+<!-- Main Content -->
+<div class="main">
+    <h1>T-Shirts</h1>
+    <p>12 Products</p>
+</div>
+
+<div class="cards">
+
+    <div class="card">
+        <img src="T-shirts/tshirt img1.webp">
+        <h3>Oversized Textured Tee - Olive Green</h3>
+        <p>Rs. 2,999</p>
+        <button onclick="addToCart('tshirt')">Add</button>
+    </div>
+
+    <div class="card">
+        <img src="T-shirts/tshirt img2.webp">
+        <h3>Oversized Printed Tee - Blue</h3>
+        <p>Rs. 3,499</p>
+        <button onclick="addToCart('tshirt')">Add</button>
+    </div>
+
+    <div class="card">
+        <img src="T-shirts/tshirt img3.webp">
+        <h3>Oversized Mesh Tee - Cream</h3>
+        <p>Rs. 1,999</p>
+        <button onclick="addToCart('tshirt')">Add</button>
+    </div>
+
+    <div class="card">
+        <img src="T-shirts/tshirt img4.webp">
+        <h3>Textured Oversized T-Shirt - Navy Blue</h3>
+        <p>Rs. 4,999</p>
+        <button onclick="addToCart('tshirt')">Add</button>
+    </div>
+
+</div>
+
+<div class="cards">
+
+    <div class="card">
+        <img src="T-shirts/tshirt img5.webp">
+        <h3>Box Fit Tee - White</h3>
+        <p>Rs. 2,999</p>
+        <button onclick="addToCart('tshirt')">Add</button>
+    </div>
+
+    <div class="card">
+        <img src="T-shirts/tshirt img6.webp">
+        <h3>Oversized Textured Tee - Taupe</h3>
+        <p>Rs. 3,499</p>
+        <button onclick="addToCart('tshirt')">Add</button>
+    </div>
+
+    <div class="card">
+        <img src="T-shirts/tshirt img7.webp">
+        <h3>Oversized Mesh Tee - Taupe</h3>
+        <p>Rs. 1,999</p>
+        <button onclick="addToCart('tshirt')">Add</button>
+    </div>
+
+    <div class="card">
+        <img src="T-shirts/tshirt img8.webp">
+        <h3>Box Fit Tee - Beige</h3>
+        <p>Rs. 4,999</p>
+        <button onclick="addToCart('tshirt')">Add</button>
+    </div>
+
+</div>
+
+<div class="cards">
+
+    <div class="card">
+        <img src="T-shirts/tshirt img9.webp">
+        <h3>Emerald Green V-Neck</h3>
+        <p>Rs. 2,999</p>
+        <button onclick="addToCart('tshirt')">Add</button>
+    </div>
+
+    <div class="card">
+        <img src="T-shirts/tshirt img10.webp">
+        <h3>Crew Neck T-Shirt - Charcoal Grey</h3>
+        <p>Rs. 3,499</p>
+        <button onclick="addToCart('tshirt')">Add</button>
+    </div>
+
+    <div class="card">
+        <img src="T-shirts/tshirt img11.webp">
+        <h3>Striped T-Shirt - Grey</h3>
+        <p>Rs. 1,999</p>
+        <button onclick="addToCart('tshirt')">Add</button>
+    </div>
+
+    <div class="card">
+        <img src="T-shirts/tshirt img12.webp">
+        <h3>Striped Pocket T-Shirt - Green</h3>
+        <p>Rs. 4,999</p>
+        <button onclick="addToCart('tshirt')">Add</button>
+    </div>
+
+</div>
+
+<script src="nav-script.js"></script>
+</body>
+</html>

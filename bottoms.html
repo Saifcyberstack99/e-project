@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav-style.css">
+</head>
+<body>
+
+<!-- Topbar -->
+<div class="topbar">
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+    <form class="search-box" onsubmit="searchFunction(event)">
+        <input type="text" id="searchInput" placeholder="Search products...">
+        <button type="submit">Search</button>
+    </form>
+    <!-- headings -->
+    <div class="heading">
+    <h1>VOGUEMAN</h1>
+</div>
+</div>
+</div>
+
+<!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+    <h2>Wardrobe</h2>
+    <a href="index.html">Home</a>
+    <a href="shirts.html">Shirts</a>
+    <a href="polos.html">Collor Polo</a>
+    <a href="bottoms.html">Bottom Wear</a>
+    <a href="tshirts.html">T-Shirts</a>
+    <a href="fragrances.html">Fragrances</a>
+    <a href="shoes.html">Foot Wear</a>
+</div>
+
+<!-- Overlay -->
+<div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+<!-- Main Content -->
+<div class="main">
+    <h1>Bottom Wear</h1>
+    <p>12 Products</p>
+</div>
+
+<div class="cards">
+
+    <div class="card">
+        <img src="Bottom/bottom img11.webp">
+        <h3>Knit Cargo Trouser- Black</h3>
+        <p>Rs. 2,999</p>
+        <button onclick="addToCart('bottom')">Add</button>
+    </div>
+
+    <div class="card">
+        <img src="Bottom/bottom imgnew.webp">
+        <h3>Straight Jogger Pants - Cream</h3>
+        <p>Rs. 3,499</p>
+        <button onclick="addToCart('bottom')">Add</button>
+    </div>
+
+    <div class="card">
+        <img src="Bottom/bottom img6.webp">
+        <h3>Straight Cargo Pants - Navy Blue</h3>
+        <p>Rs. 1,999</p>
+        <button onclick="addToCart('bottom')">Add</button>
+    </div>
+
+    <div class="card">
+        <img src="Bottom/bottom imgnew 3.webp">
+        <h3>Pintex Jogger Pants - Light Grey</h3>
+        <p>Rs. 4,999</p>
+        <button onclick="addToCart('bottom')">Add</button>
+    </div>
+
+</div>
+
+<div class="cards">
+
+    <div class="card">
+        <img src="Bottom/bottom imgnew4.webp">
+        <h3>Loose Fit Cargo - Brown</h3>
+        <p>Rs. 2,999</p>
+        <button onclick="addToCart('bottom')">Add</button>
+    </div>
+
+    <div class="card">
+        <img src="Bottom/bottom img7.webp">
+        <h3>All Day Pants - Brown</h3>
+        <p>Rs. 3,499</p>
+        <button onclick="addToCart('bottom')">Add</button>
+    </div>
+
+    <div class="card">
+        <img src="Bottom/bottom img9.webp">
+        <h3>Jogger Pants - Heather Grey</h3>
+        <p>Rs. 1,999</p>
+        <button onclick="addToCart('bottom')">Add</button>
+    </div>
+
+    <div class="card">
+        <img src="Bottom/1bottom img new 12.webp">
+        <h3>Straight Fit Chinos - Sand</h3>
+        <p>Rs. 4,999</p>
+        <button onclick="addToCart('bottom')">Add</button>
+    </div>
+
+</div>
+
+<div class="cards">
+
+    <div class="card">
+        <img src="Bottom/bottom img8.webp">
+        <h3>Jogger Pants - Heather Dark Grey</h3>
+        <p>Rs. 2,999</p>
+        <button onclick="addToCart('bottom')">Add</button>
+    </div>
+
+    <div class="card">
+        <img src="Bottom/bottom imgnew5.webp">
+        <h3>Classic Straight Pants - Grey</h3>
+        <p>Rs. 3,499</p>
+        <button onclick="addToCart('bottom')">Add</button>
+    </div>
+
+    <div class="card">
+        <img src="Bottom/bottom img2.webp">
+        <h3>Striped Woven Pajamas - Green</h3>
+        <p>Rs. 1,999</p>
+        <button onclick="addToCart('bottom')">Add</button>
+    </div>
+
+    <div class="card">
+        <img src="Bottom/bottom img10.webp">
+        <h3>Straight Jogger Pants - White</h3>
+        <p>Rs. 4,999</p>
+        <button onclick="addToCart('bottom')">Add</button>
+    </div>
+
+</div>
+
+<script src="nav-script.js"></script>
+</body>
+</html>

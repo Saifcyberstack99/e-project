@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav-style.css">
+</head>
+<body>
+
+<!-- Topbar -->
+<div class="topbar">
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+    <form class="search-box" onsubmit="searchFunction(event)">
+        <input type="text" id="searchInput" placeholder="Search products...">
+        <button type="submit">Search</button>
+    </form>
+    <!-- headings -->
+    <div class="heading">
+    <h1>VOGUEMAN</h1>
+</div>
+</div>
+</div>
+
+<!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+    <h2>Wardrobe</h2>
+    <a href="index.html">Home</a>
+    <a href="shirts.html">Shirts</a>
+    <a href="polos.html">Collor Polo</a>
+    <a href="bottoms.html">Bottom Wear</a>
+    <a href="tshirts.html">T-Shirts</a>
+    <a href="fragrances.html">Fragrances</a>
+    <a href="shoes.html">Foot Wear</a>
+</div>
+
+<!-- Overlay -->
+<div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+<!-- Main Content -->
+<div class="main">
+    <h1>Shoes</h1>
+    <p>12 Products</p>
+</div>
+
+<div class="cards">
+
+    <div class="card">
+        <img src="shoes/shoes img1.webp">
+        <h3>Penny Suede Loafers - Navy Blue</h3>
+        <p>Rs. 4,999</p>
+        <button onclick="addToCart('shoe')">Add</button>
+    </div>
+
+    <div class="card">
+        <img src="shoes/shoes img2.webp">
+        <h3>Slip On Suede Loafers - Green</h3>
+        <p>Rs. 5,000</p>
+        <button onclick="addToCart('shoe')">Add</button>
+    </div>
+
+    <div class="card">
+        <img src="shoes/shoes img3.webp">
+        <h3>Slip On Suede Loafers - Black</h3>
+        <p>Rs. 4,500</p>
+        <button onclick="addToCart('shoe')">Add</button>
+    </div>
+
+    <div class="card">
+        <img src="shoes/shoes img4.webp">
+        <h3>Slip On Suede Loafers - Beige</h3>
+        <p>Rs. 5,000</p>
+        <button onclick="addToCart('shoe')">Add</button>
+    </div>
+
+</div>
+
+<div class="cards">
+
+    <div class="card">
+        <img src="shoes/shoes img5.webp">
+        <h3>Classic Loafer Shoes - Black</h3>
+        <p>Rs. 4,500</p>
+        <button onclick="addToCart('shoe')">Add</button>
+    </div>
+
+    <div class="card">
+        <img src="shoes/shoes img6.webp">
+        <h3>Classic Loafer Shoes - Brown</h3>
+        <p>Rs. 5,000</p>
+        <button onclick="addToCart('shoe')">Add</button>
+    </div>
+
+    <div class="card">
+        <img src="shoes/shoes img7.webp">
+        <h3>Penny Suede Loafers - Grey</h3>
+        <p>Rs. 5,100</p>
+        <button onclick="addToCart('shoe')">Add</button>
+    </div>
+
+    <div class="card">
+        <img src="shoes/shoes img8.webp">
+        <h3>Slip On Suede Loafers - Dark Brown</h3>
+        <p>Rs. 5,000</p>
+        <button onclick="addToCart('shoe')">Add</button>
+    </div>
+
+</div>
+
+<div class="cards">
+
+    <div class="card">
+        <img src="shoes/shoes img9.webp">
+        <h3>Slip On Suede Loafers - Black</h3>
+        <p>Rs. 5,000</p>
+        <button onclick="addToCart('shoe')">Add</button>
+    </div>
+
+    <div class="card">
+        <img src="shoes/shoes img10.webp">
+        <h3>Penny Slides</h3>
+        <p>Rs. 1,500</p>
+        <button onclick="addToCart('shoe')">Add</button>
+    </div>
+
+    <div class="card">
+        <img src="shoes/shoes img11.webp">
+        <h3>Slip On Shoes - Black</h3>
+        <p>Rs. 5,000</p>
+        <button onclick="addToCart('shoe')">Add</button>
+    </div>
+
+    <div class="card">
+        <img src="shoes/shoes img12.webp">
+        <h3>Prussian Slides</h3>
+        <p>Rs. 1,500</p>
+        <button onclick="addToCart('shoe')">Add</button>
+    </div>
+
+</div>
+
+<script src="nav-script.js"></script>
+</body>
+</html>

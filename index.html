@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav-style.css">
+    <script src="script.js"></script>
+    
+</head>
+<body>
+    
+
+    <header class="main-header">
+   <div class="header-left">
+    <span class="menu-icon" onclick="toggleMenu()">☰</span>
+    <a href="search.html" class="search-icon"><img src="search.icon.png" alt=""></a>
+    <p>Search</p>
+</div>
+
+
+
+<div id="overlay" class="overlay" onclick="toggleMenu()"></div>
+
+    <div class="header-center">
+        <a href="#" class="logo">VOGUEMAN</a>
+        
+    </div>
+
+    <div class="header-right">
+        <a class="about" href="about.html">About & Team</a>
+        <a href="login.html" class="icon" target="_self">Account</a> <a href="javascript:void(0)" id="cartBtn" class="icon2"><img src="shooping cart.png" alt=""> </a> </div>
+<div id="cartDrawer" class="cart-drawer">
+    <div class="cart-header">
+        <h3>YOUR CART</h3>
+        <span class="close-cart">&times;</span>
+    </div>
+    
+    <div class="cart-body">
+        <p class="empty-msg">Your cart is currently empty.</p>
+        
+        </div>
+
+    <div class="cart-footer">
+        <div class="total-price">
+            <span>Total:</span>
+            <span>Rs. 0</span>
+        </div>
+        <button class="checkout-btn">PROCEED TO CHECKOUT</button>
+    </div>
+</div>
+
+<div id="cartOverlay" class="cart-overlay"></div>
+        
+</header>
+
+<section class="video-banner">
+    <video autoplay muted loop playsinline class="video-element">
+        <source src="Main video.mp4">
+    
+    </video>
+
+    <div class="video-content">
+        
+        <p>New Summer Collection 2026</p>
+        <a href="#" class="shop-btn">SHOP NOW</a>
+    </div>
+</section>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mandeez - Premium Experience</title>
+    <style>
+        :root {
+            --gold: #c9a962;
+            --black: #1a1a1a;
+            --gray: #f4f4f4;
+        }
+
+        body { font-family: 'Inter', sans-serif; background: #fff; margin: 0; }
+
+        .section-container {
+            max-width: 1400px;
+            margin: 50px auto;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .view-all {
+            text-decoration: none;
+            color: var(--black);
+            font-weight: 700;
+            letter-spacing: 2px;
+            border-bottom: 2px solid var(--black);
+            padding-bottom: 5px;
+            transition: 0.3s;
+        }
+
+        .view-all:hover { color: var(--gold); border-color: var(--gold); }
+
+        /* Carousel Track */
+        .carousel-wrapper {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .carousel-track {
+            display: flex;
+            gap: 20px;
+            transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        /* Product Card - The "Maza" Part */
+        .product-card {
+            min-width: calc(25% - 15px); /* 4 cards dikhenge */
+            flex: 0 0 auto;
+            cursor: pointer;
+        }
+
+        .img-container {
+            position: relative;
+            aspect-ratio: 3/4;
+            overflow: hidden;
+            background: var(--gray);
+            border-radius: 4px;
+        }
+
+        .img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            transition: opacity 0.5s ease;
+        }
+
+        .img-back { opacity: 0; }
+
+        .product-card:hover .img-back { opacity: 1; }
+        .product-card:hover .img-front { opacity: 0; }
+
+        .info { padding: 15px 0; text-align: left; }
+        .p-name { font-size: 14px; color: #444; margin-bottom: 5px; }
+        .p-price { font-weight: 700; color: var(--black); }
+
+        /* Navigation Arrows */
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            border: 1px solid #ddd;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 10;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .nav-btn:hover { background: var(--black); color: white; border-color: var(--black); }
+        .prev { left: -20px; }
+        .next { right: -20px; }
+
+
+    </style>
+</head>
+<body>
+
+<div class="section-container">
+    <div class="header-flex">
+        <h2 style="letter-spacing: 1px;">NEW ARRIVALS</h2>
+        <a href="#" class="view-all">VIEW ALL</a>
+    </div>
+
+    <button class="nav-btn prev" onclick="slide('prev')">❮</button>
+    <button class="nav-btn next" onclick="slide('next')">❯</button>
+
+    <div class="carousel-wrapper">
+        <div class="carousel-track" id="track">
+            <div class="product-card">
+                <div class="img-container">
+                    <img src="Shirts/3_2_cd71db18-120a-461b-b894-8a8e528a4524.webp" class="img-front">
+                    <img src="Shirts/3_4_99cff227-d4da-4e64-9333-c4229ef21667.webp" class="img-back">
+                </div>
+                <div class="info">
+                    <div class="p-name">Black And White Premium Shirt</div>
+                    <div class="p-price">Rs. 1,850</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="img-container">
+                    <img src="Shirts/5_1_7686cbb8-3818-4e31-972b-036273aa039a.webp" class="img-front">
+                    <img src="Shirts/5_4_687dcc63-2b22-4693-ab11-0739c3c27cff.webp" class="img-back">
+                </div>
+                <div class="info">
+                    <div class="p-name">Classic Maroon Shirt</div>
+                    <div class="p-price">Rs. 2,100</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="img-container">
+                    <img src="Shirts/12_1_dbf85525-5848-423d-8719-1d326795be5e.webp" class="img-front">
+                    <img src="Shirts/12_3_f1bbac1e-3065-41e4-b75e-34f699996d6a.webp" class="img-back">
+                </div>
+                <div class="info">
+                    <div class="p-name">Pure White Cotton Shirt</div>
+                    <div class="p-price">Rs. 3,250</div>
+                </div>
+            </div>
+             <div class="product-card">
+                <div class="img-container">
+                    <img src="Shirts/18_1_horizontal-burnout-cuban-shirt-black.webp" class="img-front">
+                    <img src="Shirts/18_4_05df27e6-9287-403f-8f51-e6afc6f353e4.webp" class="img-back">
+                </div>
+                <div class="info">
+                    <div class="p-name">Pure Black Shirt</div>
+                    <div class="p-price">Rs. 1,950</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="img-container">
+                    <img src="Shirts/3_2_60c9edc4-22dc-48b1-8137-4cc32f7dd2df.webp" class="img-front">
+                 
+                </div>
+                <div class="info">
+                    <div class="p-name">OLIVE GREEN PAJAMA</div>
+                    <div class="p-price">Rs. 1,700</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="big-banner">
+    <img src="POLO-BANNER_jpg.webp" alt="Promotion">
+    
+    <div class="banner-content">
+        <h2>Summer Essentials</h2>
+        <p>Experience the most comfortable fabric of the season.</p>
+        <a href="#" class="shop-now-btn">Shop Collection</a>
+    </div>
+</div>
+
+
+<div class="section-container">
+    <div class="header-flex">
+        <h2 style="letter-spacing: 2px; font-weight: 800;">PREMIUM POLOS</h2>
+        <a href="#" class="view-all">EXPLORE ALL</a>
+    </div>
+
+    <button class="nav-btn prev" onclick="slidePolos('prev')">❮</button>
+    <button class="nav-btn next" onclick="slidePolos('next')">❯</button>
+
+    <div class="carousel-wrapper">
+        <div class="carousel-track" id="polo-track">
+            
+            <div class="product-card">
+                <div class="img-container">
+                    <img src="Polos/polo1.webp" class="img-front">
+                    <img src="Polos/polo2.webp" class="img-back">
+                </div>
+                <div class="info">
+                    <div class="p-name">CLASSIC WHITE POLO</div>
+                    <div class="p-price">Rs. 2,850</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="img-container">
+                    <img src="Polos/polo4.jpg" class="img-front">
+                    <img src="Polos/polo5.webp" class="img-back">
+                </div>
+                <div class="info">
+                    <div class="p-name">ROYAL GRAY SLIM FIT</div>
+                    <div class="p-price">Rs. 2,850</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="img-container">
+                    <img src="Polos/polo3.webp" class="img-front">
+                    <img src="Polos/polo7.webp" class="img-back">
+                    
+                </div>
+                <div class="info">
+                    <div class="p-name">FOREST GREEN SIGNATURE</div>
+                    <div class="p-price">Rs. 3,100</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="img-container">
+                    <img src="Polos/polo6.webp" class="img-front">
+                    
+                </div>
+                <div class="info">
+                    <div class="p-name">JET BLACK ESSENTIAL POLO</div>
+                    <div class="p-price">Rs. 2,850</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="big-banner bottom-wear-banner">
+    <img src="BOTTOMS-WEB-BANNERS_jpg.webp" alt="Bottom Wear Collection">
+    
+    <div class="banner-content">
+        <span style="letter-spacing: 5px; font-size: 14px; margin-bottom: 10px;">ENGINEERED FOR COMFORT</span>
+        <h2>The Perfect Fit</h2>
+        <p>From Classic Chinos to Rugged Denim. Find your everyday essential.</p>
+        <div class="banner-btns">
+            <a href="#" class="shop-now-btn">Shop Jeans</a>
+            <a href="#" class="shop-now-btn secondary-btn">Shop Chinos</a>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="section-container">
+    <div class="header-flex">
+        <h2 style="letter-spacing: 2px; font-weight: 800;">BOTTOM WEAR</h2>
+        <a href="#" class="view-all">SHOP ALL BOTTOMS</a>
+    </div>
+
+    <button class="nav-btn prev" onclick="slideBottoms('prev')">❮</button>
+    <button class="nav-btn next" onclick="slideBottoms('next')">❯</button>
+
+    <div class="carousel-wrapper">
+        <div class="carousel-track" id="bottom-track">
+            
+            <div class="product-card">
+                <div class="img-container">
+                    <img src="Bottom Wear/bottom1.webp" class="img-front">
+                   
+                </div>
+                <div class="info">
+                    <div class="p-name">STRAIGHT JOGGER PANTS- CREAM</div>
+                    <div class="p-price">Rs. 3,450</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="img-container">
+                    <img src="Bottom Wear/bottom2.webp" class="img-front">
+                
+                </div>
+                <div class="info">
+                    <div class="p-name">ALL DAY PANTS- DARK BLUE</div>
+                    <div class="p-price">Rs. 2,950</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="img-container">
+                    <img src="Bottom Wear/bottom3.webp" class="img-front">
+                    <img src="Bottom Wear/bottom4.webp" class="img-back">
+                </div>
+                <div class="info">
+                    <div class="p-name">TACTICAL CARGO PANTS</div>
+                    <div class="p-price">Rs. 3,200</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="img-container">
+                    <img src="Bottom Wear/bottom5.webp" class="img-front">
+                    <img src="Bottom Wear/bottom6.webp" class="img-back">
+                </div>
+                <div class="info">
+                    <div class="p-name">PREMIUM TECH JOGGERS</div>
+                    <div class="p-price">Rs. 2,650</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="img-container">
+                    <img src="https://placehold.co/400x600/4a4a4a/ffffff?text=Grey+Shorts+Front" class="img-front">
+                    <img src="https://placehold.co/400x600/666666/ffffff?text=Shorts+Detail" class="img-back">
+                </div>
+                <div class="info">
+                    <div class="p-name">RELAXED LOUNGE SHORTS</div>
+                    <div class="p-price">Rs. 1,450</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="big-banner t-shirt-banner">
+    <img src="T-shirt-Web-Banners-New_jpg.webp" alt="T-Shirt Collection">
+    
+    <div class="banner-content">
+        <span class="banner-subtitle">EVERYDAY ESSENTIALS</span>
+        <h2 class="banner-title">The Ultimate Comfort</h2>
+        <p class="banner-description">Premium 100% Organic Cotton. Breathable, Durable, and Stylish.</p>
+        <div class="banner-btns">
+            <a href="#" class="shop-now-btn">Graphic Tees</a>
+            <a href="#" class="shop-now-btn secondary-btn">Plain Basics</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="section-container">
+    <div class="header-flex">
+        <h2 style="letter-spacing: 2px; font-weight: 800;">T-SHIRTS</h2>
+        <a href="#" class="view-all">EXPLORE ALL TEES</a>
+    </div>
+
+    <button class="nav-btn prev" onclick="slideTShirts('prev')">❮</button>
+    <button class="nav-btn next" onclick="slideTShirts('next')">❯</button>
+
+    <div class="carousel-wrapper">
+        <div class="carousel-track" id="tshirt-track">
+            
+            <div class="product-card">
+                <div class="img-container">
+                    <img src="T-shirt/T-shirt 1.webp" class="img-front">
+                    
+                </div>
+                <div class="info">
+                    <div class="p-name">OVERSIZED PRINTED TEE- BLUE</div>
+                    <div class="p-price">Rs. 1,650</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="img-container">
+                    <img src="T-shirt/T-shirt 2.webp" class="img-front">
+                   
+                </div>
+                <div class="info">
+                    <div class="p-name">OVERSIZED MESH TEE-CREAM</div>
+                    <div class="p-price">Rs. 1,200</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="img-container">
+                    <img src="T-shirt/T-shirt 3.webp" class="img-front">
+                    
+                </div>
+                <div class="info">
+                    <div class="p-name">KNITTED OVERSIZED T-SHIRT OLIVE GREEN</div>
+                    <div class="p-price">Rs. 1,450</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="img-container">
+                    <img src="T-shirt/T shirt 4.webp" class="img-front">
+                   
+                </div>
+                <div class="info">
+                    <div class="p-name">KNITTED OVERSIZED T-SHIRT CREAM </div>
+                    <div class="p-price">Rs. 1,950</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="img-container">
+                    <img src="T-shirt/T-shirt 4.webp" class="img-front">
+                   
+                </div>
+                <div class="info">
+                    <div class="p-name">TEXTURED OVERSIZED T-SHIRT-NAVY BLUE</div>
+                    <div class="p-price">Rs. 1,350</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="big-banner fragrance-banner">
+    <img src="Homepage_Banner_-_Fragrance_desktop_08b0b3e9-d243-40d8-bfeb-03bee52dfe51.webp" alt="Fragrance Collection">
+    
+    <div class="banner-content">
+        <span class="banner-subtitle" style="color: #d4af37;">LONG LASTING • CAPTIVATING</span>
+        <h2 class="banner-title">Define Your Scent</h2>
+        <p class="banner-description">Discover our exclusive range of Eau de Parfum. Crafted for the modern man who leaves an impression.</p>
+        <div class="banner-btns">
+            <a href="#" class="shop-now-btn fragrance-btn">Shop Fragrances</a>
+            <a href="#" class="shop-now-btn secondary-btn">Discover Notes</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="section-container">
+    <div class="header-flex">
+        <h2 style="letter-spacing: 3px; font-weight: 800; color: #1a1a1a;">ELITE SCENTS</h2>
+        <a href="#" class="view-all">VIEW ALL FRAGRANCES</a>
+    </div>
+
+    <button class="nav-btn prev" onclick="slideFragrance('prev')">❮</button>
+    <button class="nav-btn next" onclick="slideFragrance('next')">❯</button>
+
+    <div class="carousel-wrapper">
+        <div class="carousel-track" id="fragrance-track">
+            
+            <div class="product-card">
+                <div class="img-container" style="background: #000;">
+                    <img src="fragnances/fragnance 1.webp" class="img-front">
+                    <img src="fragnances/fragnance 2.webp" class="img-back">
+                </div>
+                <div class="info">
+                    <div class="p-name">ROYAL OUD - EAU DE PARFUM</div>
+                    <div class="p-price" style="color: #d4af37;">Rs. 5,450</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="img-container">
+                    <img src="fragnances/fragnance 3.webp" class="img-front">
+                    <img src="fragnances/fragnance 4.webp" class="img-back">
+                </div>
+                <div class="info">
+                    <div class="p-name">OCEAN BLUE - FRESH AQUATIC</div>
+                    <div class="p-price">Rs. 3,800</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="img-container">
+                    <img src="fragnances/fragnance 5.webp" class="img-front">
+                    <img src="fragnances/fragnance 6.webp" class="img-back">
+                </div>
+                <div class="info">
+                    <div class="p-name">DARK LEATHER - INTENSE WOOD</div>
+                    <div class="p-price">Rs. 4,200</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="img-container">
+                    <img src="fragnances/fragnance 7.webp" class="img-front">
+                    <img src="fragnances/fragnance 8.webp" class="img-back">
+                </div>
+                <div class="info">
+                    <div class="p-name">AMBER GOLD - WARM SPICE</div>
+                    <div class="p-price" style="color: #d4af37;">Rs. 4,850</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="big-banner footwear-banner">
+    <img src="foot wear/Gemini_Generated_Image_dwiyrydwiyrydwiy.png" alt="Footwear Collection">
+    
+    <div class="banner-content">
+        <span class="banner-subtitle" style="color: #60a5fa;">STEP INTO LUXURY • WALK WITH CONFIDENCE</span>
+        <h2 class="banner-title">Elevate Your Stride</h2>
+        <p class="banner-description">From handcrafted leather loafers to high-performance urban sneakers. Engineering comfort for every step.</p>
+        <div class="banner-btns">
+            <a href="#" class="shop-now-btn footwear-btn">Shop Sneakers</a>
+            <a href="#" class="shop-now-btn secondary-btn">Formal Collection</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="section-container">
+    <div class="header-flex">
+        <h2 style="letter-spacing: 2px; font-weight: 800;">VOGUEMAN FOOTWEAR</h2>
+        <a href="#" class="view-all">VIEW ALL SHOES</a>
+    </div>
+
+    <button class="nav-btn prev" onclick="slideFootwear('prev')">❮</button>
+    <button class="nav-btn next" onclick="slideFootwear('next')">❯</button>
+
+    <div class="carousel-wrapper">
+        <div class="carousel-track" id="footwear-track">
+            
+            <div class="product-card">
+                <div class="img-container">
+                    <img src="foot wear/foot 1.webp" class="img-front">
+                    <img src="foot wear/foot 2.webp" class="img-back">
+                </div>
+                <div class="info">
+                    <div class="p-name">PREMIUM NAVY BLUE SUEDE LOAFERS</div>
+                    <div class="p-price">Rs. 4,950</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="img-container">
+                    <img src="foot wear/foot 3.webp" class="img-front">
+                    
+                </div>
+                <div class="info">
+                    <div class="p-name">SLIP ON SUEDE LOAFERS- GREEN</div>
+                    <div class="p-price">Rs. 3,200</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="img-container">
+                    <img src="foot wear/foot 4.webp" class="img-front">
+                    
+                </div>
+                <div class="info">
+                    <div class="p-name">SLIP ON SUEDE LOAFERS- BLACK</div>
+                    <div class="p-price">Rs. 6,500</div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="img-container">
+                    <img src="foot wear/foot 5.webp" class="img-front">
+                    
+                </div>
+                <div class="info">
+                    <div class="p-name">SLIP ON SUEDE LOAFERS- BEIGE</div>
+                    <div class="p-price">Rs. 5,200</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="sidebar" id="sidebar">
+    <h2>Wardrobe</h2>
+    <a href="index.html">Home</a>
+    <a href="shirts.html">Shirts</a>
+    <a href="polos.html">Collor Polo</a>
+    <a href="bottoms.html">Bottom Wear</a>
+    <a href="tshirts.html">T-Shirts</a>
+    <a href="fragrances.html">Fragrances</a>
+    <a href="shoes.html">Foot Wear</a>
+</div>
+
+
+
+
+
+
+
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <h3>VOGUEMAN</h3>
+            <p>Premium quality essentials for the modern man. We focus on comfort, style, and durability.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/">FACEBOOK</a>
+                <a href="https://www.instagram.com/?hl=en">INSTAGRAM</a>
+                <a href="https://x.com/">TWITTER</a>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h4>SHOP</h4>
+            <ul>
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">Best Sellers</a></li>
+                <li><a href="#">T-Shirts</a></li>
+                <li><a href="#">Innerwear</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>SUPPORT</h4>
+            <ul>
+                <li><a href="#">Track Order</a></li>
+                <li><a href="#">Shipping Policy</a></li>
+                <li><a href="#">Return & Exchange</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="about.html">Meet the Team</a></li> <li><a href="about.html">Contact Us</a></li>  <li><a href="#">Return & Exchange</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>NEWSLETTER</h4>
+            <p>Subscribe to get special offers and once-in-a-lifetime deals.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email">
+                <button type="submit">JOIN</button>
+            </form>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2026 VOGUEMAN Pakistan. All Rights Reserved.</p>
+    </div>
+</footer>
+<script>
+    // 1. Elements ko dhoondo
+    var cartBtn = document.getElementById("cartBtn");
+    var cartDrawer = document.getElementById("cartDrawer");
+    var cartOverlay = document.getElementById("cartOverlay");
+    var closeCart = document.querySelector(".close-cart");
+
+    // 2. Open Cart Function
+    if(cartBtn) {
+        cartBtn.onclick = function(e) {
+            e.preventDefault();
+            cartDrawer.classList.add("open");
+            cartOverlay.classList.add("show");
+            console.log("Cart Open Ho Gaya!"); // Ye check karne ke liye hai
+        }
+    }
+
+    // 3. Close Cart Function (X par click)
+    if(closeCart) {
+        closeCart.onclick = function() {
+            cartDrawer.classList.remove("open");
+            cartOverlay.classList.remove("show");
+        }
+    }
+
+    // 4. Close Cart Function (Bahir click karne par)
+    if(cartOverlay) {
+        cartOverlay.onclick = function() {
+            cartDrawer.classList.remove("open");
+            cartOverlay.classList.remove("show");
+        }
+    }
+</script>
+<script src="nav-script.js"></script>
+
+<script>
+    // Ye code direct HTML mein hai, ab "Not Defined" ka error nahi aa sakta
+    function searchFunction(event) {
+        let input = document.getElementById('searchInput');
+        let filter = input.value.toLowerCase();
+        
+        // Check karein ke aapke products ki class yahi hai
+        let products = document.querySelectorAll('.product-card');
+
+        products.forEach(product => {
+            let category = product.getAttribute('data-category') || "";
+            
+            if (category.toLowerCase().includes(filter)) {
+                product.style.display = ""; // Nazar aaye
+            } else {
+                product.style.display = "none"; // Chhup jaye
+            }
+        });
+    }
+</script>
+</body>
+
+</html>
